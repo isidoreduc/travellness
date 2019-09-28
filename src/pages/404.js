@@ -1,10 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
 
-export default () => {
+const Error = () => {
   return (
     <Layout>
-      <div>hello world</div>
+      <div>404 Error</div>
     </Layout>
   )
 }
+
+export default Error
