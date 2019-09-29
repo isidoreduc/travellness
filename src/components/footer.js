@@ -10,7 +10,7 @@ const footer = () => {
       {/* the links */}
       <div className={styles.links}>
         {links.map((item, index) => (
-          <Link key={index} to={item.link}>
+          <Link key={index} to={item.path}>
             {item.text}
           </Link>
         ))}
