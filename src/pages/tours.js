@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-
+import Button from "../examples-reference/button"
 const tours = () => {
   return (
     <Layout>
-      <div>tours page</div>
+      <div>tours</div>
     </Layout>
   )
 }
