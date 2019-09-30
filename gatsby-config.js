@@ -4,4 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-module.exports = { plugins: [`gatsby-plugin-styled-components`] }
+module.exports = {
+  siteMetadata: {
+    title: "Travellness",
+    description: "Come to were the life is. Travel well. Travellness.",
+    author: "@io",
+  },
+  plugins: [`gatsby-plugin-styled-components`],
+}

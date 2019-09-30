@@ -1,4 +1,9 @@
 
+
+.nav-logo {
+  height: 4rem;
+  /* max-height: 100%; */
+}
 .nav-header {
   display: flex;
   justify-content: space-between;
