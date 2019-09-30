@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 const About = () => {
   return (
     <section className={styles.about}>
-      <Title firstWord="about" rest="us" />
+      <Title title="about" subtitle="us" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>

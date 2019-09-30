@@ -1,12 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-
-const Title = ({ firstWord, rest, className }) => {
+const Title = ({ title, subtitle, className }) => {
   return (
     <div className={className}>
       <h4>
-        <span className="firstWord">{firstWord}</span>
-        <span>{rest}</span>
+        <span className="title">{title}</span>
+        <span>{subtitle}</span>
       </h4>
     </div>
   )
@@ -18,17 +17,19 @@ export default styled(Title)`
   margin-bottom: 2rem;
   h4 {
     text-align: center;
-    letter-spacing: 12px;
+    letter-spacing: 7px;
     color: var(--primaryColor);
   }
-  .firstWord {
+  .title {
     color: var(--mainBlack);
   }
   span {
     display: block;
   }
   @media (min-width: 576px) {
-    display: inline-block;
-    margin: 0 0.35rem;
+    span {
+      display: inline-block;
+      margin: 0 0.35rem;
+    }
   }
 `
