@@ -6,9 +6,20 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Travellness",
-    description: "Come to were the life is. Travel well. Travellness.",
-    author: "@io",
+    title: 'Travellness',
+    description: 'Come to were the life is. Travel well. Travellness.',
+    author: '@io',
   },
-  plugins: [`gatsby-plugin-styled-components`],
-}
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+  ],
+};
