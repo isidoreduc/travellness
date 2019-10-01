@@ -32,8 +32,8 @@ const data = graphql`
   {
     homeImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
       childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

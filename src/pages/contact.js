@@ -1,12 +1,27 @@
-import React from "react"
-import Layout from "../components/layout"
+import React from 'react';
+import Layout from '../components/layout';
+import StyledHero from '../components/styledHero';
+import { graphql, useStaticQuery } from 'gatsby';
 
-const contact = () => {
+const Contact = () => {
+  const { contactImage } = useStaticQuery(data);
+
   return (
     <Layout>
-      <div>contact page</div>
+      <StyledHero img={contactImage.childImageSharp.fluid}></StyledHero>
     </Layout>
-  )
-}
+  );
+};
 
-export default contact
+const data = graphql`
+  {
+    contactImage: file(relativePath: { eq: "connectBcg.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`;
+export default Contact;

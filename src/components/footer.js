@@ -1,8 +1,8 @@
-import React from "react"
-import styles from "../css/footer.module.css"
-import links from "../constants/links"
-import icons from "../constants/social-icons"
-import { Link } from "gatsby"
+import React from 'react';
+import styles from '../css/footer.module.css';
+import links from '../constants/links';
+import icons from '../constants/social-icons';
+import { Link } from 'gatsby';
 
 const footer = () => {
   return (
@@ -29,10 +29,10 @@ const footer = () => {
         ))}
       </div>
       <div className={styles.copyright}>
-        &copy; travellness {new Date().getFullYear()} all righsts reserved
+        &copy; travellness {new Date().getFullYear()} all rights reserved
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default footer
+export default footer;

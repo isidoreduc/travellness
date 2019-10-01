@@ -1,17 +1,27 @@
 import React from 'react';
 import Layout from '../components/layout';
-import ImageFrame from '../examples-reference/imageFrame';
-// import GraphlQuery from "../examples-reference/graphlQuery"
+import StyledHero from '../components/styledHero';
+import { graphql, useStaticQuery } from 'gatsby';
 
-
-const blog = () => {
+const Blog = () => {
+  const { blogImage } = useStaticQuery(data);
   return (
     <Layout>
-      <div>
-        <ImageFrame />
-      </div>
+      <StyledHero img={blogImage.childImageSharp.fluid}></StyledHero>
     </Layout>
   );
 };
 
-export default blog;
+const data = graphql`
+  {
+    blogImage: file(relativePath: { eq: "blogBcg.jpeg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`;
+
+export default Blog;
