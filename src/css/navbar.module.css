@@ -1,8 +1,7 @@
 
 
 .nav-logo {
-  height: 4rem;
-  /* max-height: 100%; */
+  max-height: 62px;
 }
 .nav-header {
   display: flex;
