@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import StyledHero from '../components/styledHero';
 import { graphql, useStaticQuery } from 'gatsby';
+import ContactForm from '../components/Contact';
 
 const Contact = () => {
   const { contactImage } = useStaticQuery(data);
@@ -9,6 +10,7 @@ const Contact = () => {
   return (
     <Layout>
       <StyledHero img={contactImage.childImageSharp.fluid}></StyledHero>
+      <ContactForm />
     </Layout>
   );
 };
