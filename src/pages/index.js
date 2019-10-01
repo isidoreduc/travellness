@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from '../components/layout';
 import StyledHero from '../components/styledHero';
 import Banner from '../components/banner';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import About from '../components/about';
 import OurServices from '../components/ourServices';
 
@@ -16,9 +17,9 @@ export default () => {
           title="travel well. trawell"
           info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quibusdam?"
         >
-          <Link to="/tours" className="btn-white">
+          <AniLink fade to="/tours" className="btn-white">
             explore tours
-          </Link>
+          </AniLink>
         </Banner>
       </StyledHero>
 
