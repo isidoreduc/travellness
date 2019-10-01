@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
-import Button from '../examples-reference/button';
 import StyledHero from '../components/styledHero';
+import { graphql } from 'gatsby';
 
 // getting image using props, as opposed to hook useStaticQuery
 const Tours = ({ data }) => {

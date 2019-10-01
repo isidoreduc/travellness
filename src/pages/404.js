@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 import styles from '../css/error.module.css';
-import Hero from '../components/hero';
 import Banner from '../components/banner';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 

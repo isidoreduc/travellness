@@ -1,37 +1,55 @@
 import React from 'react';
 import Title from './title';
-import style from '../css/contact.module.css';
-
+import styles from '../css/contact.module.css';
 const Contact = () => {
   return (
-    <section className={style.contact}>
-      <Title title="Contact" subtitle="us" />
-      <div className={style.center}>
-        <form className={style.form} action="">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className={style.formControl}
-            placeholder="Johnny Bravo"
-          />
-          <input
-            type="text"
-            name="email"
-            id="email"
-            className={style.formControl}
-            placeholder="jb@cn.hi"
-          />
-          <textarea
-            name="message"
-            id="message"
-            rows="10"
-            className={style.formControl}
-            placeholder="Write something nice"
-          />
-          <button type="submit" className={style.submit}>
-            Submit
-          </button>
+    <section className={styles.contact}>
+      <Title title="contact" subtitle="us" />
+      <div className={styles.center}>
+        <form
+          action="https://formspree.io/isidoreducasse79@gmail.com"
+          method="POST"
+          className={styles.form}
+        >
+          <div>
+            <label htmlFor="name">name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className={styles.formControl}
+              placeholder="john smith"
+            />
+          </div>
+          <div>
+            <label htmlFor="email">email</label>
+
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className={styles.formControl}
+              placeholder="email@email.com"
+            />
+          </div>
+          <div>
+            <label htmlFor="message">message</label>
+
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              className={styles.formControl}
+              placeholder="hello there"
+            />
+          </div>
+          <div>
+            <input
+              type="submit"
+              value="submit here"
+              className={styles.submit}
+            />
+          </div>
         </form>
       </div>
     </section>
