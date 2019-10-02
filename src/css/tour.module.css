@@ -47,7 +47,10 @@
 }
 .footer h3 {
   text-transform: capitalize;
+  letter-spacing: 0rem;
+  font-weight: bold;
   margin-bottom: 0;
+  
 }
 .info {
   display: flex;
@@ -63,8 +66,10 @@
 }
 .country {
   text-transform: capitalize;
+  letter-spacing: 0rem;
   color: var(--primaryColor);
   display: flex;
+  padding: 0 1rem 0 0;
   align-items: center;
 }
 .icon {

@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import About from '../components/about';
 import OurServices from '../components/ourServices';
+import FeaturedInterviews from '../components/FeaturedInterviews';
 
 export default () => {
   const { homeImage } = useStaticQuery(data);
@@ -25,6 +26,7 @@ export default () => {
 
       <About />
       <OurServices />
+      <FeaturedInterviews />
     </Layout>
   );
 };
