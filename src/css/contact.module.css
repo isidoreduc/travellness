@@ -34,7 +34,7 @@ label {
   cursor: pointer;
 }
 .submit:hover {
-  background: var(--darkGrey);
+  background: var(--mainBlack);
   color: var(--mainWhite);
   border-color: var(--darkGrey);
 }

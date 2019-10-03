@@ -30,6 +30,5 @@
 }
 .copyright {
   text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
   line-height: 2;
 }

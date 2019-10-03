@@ -23,3 +23,7 @@
 .service h4 {
   text-transform: uppercase;
 }
+
+.service-icon {
+  color: var(--mainWhite);
+}
