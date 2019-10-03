@@ -5,6 +5,7 @@ import StyledHero from '../components/styledHero';
 import styles from '../css/template.module.css';
 import Image from 'gatsby-image';
 import AniLink from 'gatsby-plugin-transition-link';
+import Markdown from 'react-markdown';
 import {
   FaFingerprint,
   FaMap,
@@ -55,10 +56,11 @@ const Template = ({ data }) => {
               {readingTime} read
             </p>
           </div>
-          <div className={styles.desc}>{description.description}</div>
-        <AniLink fade to="/tours" className="btn-primary">
-          back to interviews
-        </AniLink>
+          <Markdown source={description.description} className={styles.desc} />
+          {/* <div className={styles.desc}>{description.description}</div> */}
+          <AniLink fade to="/tours" className="btn-primary">
+            back to interviews
+          </AniLink>
         </div>
       </section>
     </Layout>
