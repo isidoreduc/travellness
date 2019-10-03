@@ -9,7 +9,6 @@ const FeaturedInterviews = () => {
   const response = useStaticQuery(getFeaturedInterviews);
   const interviews = response.featuredInterviews.edges;
 
-  console.log(interviews);
   return (
     <section className={styles.tours}>
       <Title title="Featured" subtitle="interviews" />
@@ -41,7 +40,7 @@ const getFeaturedInterviews = graphql`
           readingTime
           mediaFiles {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           author {
