@@ -30,13 +30,9 @@ const Template = ({ data }) => {
   return (
     <Layout>
       <StyledHero img={mainImage.fluid} />
+
       <section className={styles.template}>
         <div className={styles.center}>
-          <div className={styles.images}>
-            {allImages.map((item, index) => (
-              <Image key={index} fluid={item.fluid} className={styles.image} />
-            ))}
-          </div>
           <div className={styles.title}>{title}</div>
           <div className={styles.info}>
             <p>
@@ -63,6 +59,13 @@ const Template = ({ data }) => {
           </AniLink>
         </div>
       </section>
+      <div className={styles.center}>
+        <div className={styles.images}>
+          {allImages.map((item, index) => (
+            <Image key={index} fluid={item.fluid} className={styles.image} />
+          ))}
+        </div>
+      </div>
     </Layout>
   );
 };
