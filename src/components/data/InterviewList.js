@@ -15,7 +15,7 @@ const InterviewList = ({ allInterv }) => {
 
   console.log(sortedInterviews);
   return (
-    <section className={styles.item}>
+    <section className={styles.tours}>
       <Title title="anthropoetry" subtitle="interviews" />
       <div className={styles.center}>
         {sortedInterviews.map(({ node }) => (
