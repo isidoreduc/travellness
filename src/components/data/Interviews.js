@@ -24,7 +24,7 @@ const interviews = graphql`
           readingTime
           mediaFiles {
             fluid {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           writtenBy

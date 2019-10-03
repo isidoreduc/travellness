@@ -5,6 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { FaFingerprint } from 'react-icons/fa';
 
 const Interview = ({ interview }) => {
+
   return (
     <article className={styles.tour}>
       <div className={styles.imgContainer}>

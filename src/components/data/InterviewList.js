@@ -13,7 +13,6 @@ const InterviewList = ({ allInterv }) => {
     setSortedInterviews(...sortedInterviews, allInterv.edges);
   }, []);
 
-  console.log(sortedInterviews);
   return (
     <section className={styles.tours}>
       <Title title="anthropoetry" subtitle="interviews" />
