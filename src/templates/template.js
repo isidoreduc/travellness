@@ -82,7 +82,7 @@ export const query = graphql`
       readingTime
       mediaFiles {
         fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       author {
