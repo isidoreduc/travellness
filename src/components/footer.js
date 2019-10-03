@@ -29,7 +29,7 @@ const footer = () => {
         ))}
       </div>
       <div className={styles.copyright}>
-        &copy; travellness {new Date().getFullYear()} all rights reserved
+        {new Date().getFullYear()} &copy; anthropoetry
       </div>
     </footer>
   );

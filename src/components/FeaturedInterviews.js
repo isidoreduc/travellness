@@ -20,7 +20,7 @@ const FeaturedInterviews = () => {
         ))}
       </div>
       <AniLink fade to="/tours" className="btn-primary">
-        all tours
+        all articles
       </AniLink>
     </section>
   );

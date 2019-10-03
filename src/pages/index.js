@@ -15,18 +15,18 @@ export default () => {
     <Layout>
       <StyledHero img={homeImage.childImageSharp.fluid} home>
         <Banner
-          title="travel well. trawell"
+          title="anthropoetry"
           info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quibusdam?"
         >
           <AniLink fade to="/tours" className="btn-white">
-            explore tours
+            explore
           </AniLink>
         </Banner>
       </StyledHero>
 
-      <About />
-      <OurServices />
       <FeaturedInterviews />
+      <OurServices />
+      <About />
     </Layout>
   );
 };
