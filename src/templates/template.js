@@ -5,7 +5,10 @@ import StyledHero from '../components/styledHero';
 import styles from '../css/template.module.css';
 import Image from 'gatsby-image';
 import AniLink from 'gatsby-plugin-transition-link';
-import Markdown from 'react-markdown';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import Markdown from 'react-markdown/with-html';
+
 import {
   FaFingerprint,
   FaMap,
@@ -22,10 +25,38 @@ const Template = ({ data }) => {
     readingTime,
     mediaFiles,
     writtenBy,
+    content,
     description,
   } = data.intv;
 
   const [mainImage, ...allImages] = mediaFiles;
+
+  // const Bold = ({ children }) => <span className="bold">{children}</span>;
+  // const Text = ({ children }) => <p className="align-center">{children}</p>;
+  // // content.json rendering options
+  // const options = {
+  //   // renderMark: {
+  //   //   [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+  //   // },
+  //   renderNode: {
+  //     'embedded-asset-block': node => {
+  //       return node.data.target.fields.file['en-US'].contentType ===
+  //         'video/mp4' ? (
+  //         <video
+  //           width="400"
+  //           src={node.data.target.fields.file['en-US'].url}
+  //         ></video>
+  //       ) : (
+  //         <img
+  //           width="400"
+  //           src={node.data.target.fields.file['en-US'].url}
+  //         ></img>
+  //       );
+  //     },
+
+  //     // [BLOCKS.QUOTE]: (node, children) => <Text>{children}</Text>,
+  //   },
+  // };
 
   return (
     <Layout>
@@ -52,9 +83,13 @@ const Template = ({ data }) => {
               {readingTime} read
             </p>
           </div>
-          <Markdown source={description.description} className={styles.desc} />
-          {/* <div className={styles.desc}>{description.description}</div> */}
-          <AniLink fade to="/tours" className="btn-primary">
+          <Markdown
+            escapeHtml={false}
+            source={description.description}
+            className={styles.desc}
+          />
+          {/* <div className={styles.desc}>{documentToReactComponents(json)}</div> */}
+          <AniLink to="/tours" className="btn-primary" fade="true">
             back to interviews
           </AniLink>
         </div>
@@ -92,6 +127,9 @@ export const query = graphql`
       writtenBy
       description {
         description
+      }
+      content {
+        json
       }
     }
   }
