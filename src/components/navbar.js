@@ -3,7 +3,7 @@ import styles from '../css/navbar.module.css';
 import { FaAlignRight } from 'react-icons/fa';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
-import logo from '../images/letterA1.png';
+import logo from '../images/letterA2.png';
 // import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Link } from 'gatsby';
 

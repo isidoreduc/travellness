@@ -2,7 +2,7 @@
 
 :root {
   /* --primaryColor: #3fd0d4;#00d8d6 */
-  --primaryColor: #00d8d6;
+  --primaryColor: #ff5e57; 
   --secondaryColor: #ff5e57;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -80,7 +80,7 @@ a {
   max-height: 600px;
   box-shadow: var(--lightShadow);
 } */
-main {
+.main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
