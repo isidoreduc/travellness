@@ -1,5 +1,5 @@
 import '../../../node_modules/video-react/dist/video-react.css'; // import css
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Player,
   ControlBar,
@@ -9,11 +9,12 @@ import {
   ClosedCaptionButton,
 } from 'video-react';
 
-const Videoplayer = ({ poster }) => {
+const Videoplayer = ({ poster, url }) => {
   return (
     <Player playsInline poster={poster}>
       <source
-        src="//d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4"
+        // src="//d2zihajmogu5jn.cloudfront.net/elephantsdream/ed_hd.mp4"
+        src={url}
         type="video/mp4"
       />
       <ControlBar autoHide={true}>

@@ -7,8 +7,6 @@ import Image from 'gatsby-image';
 // import AniLink from 'gatsby-plugin-transition-link';
 import { Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import video from 'video.js';
-import playback from 'videojs-playbackrate-adjuster';
 // import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 // import Markdown from 'react-markdown/with-html';
 import Videoplayer from '../components/videoplayer/Videoplayer';
@@ -30,7 +28,7 @@ const Template = ({ data }) => {
     readingTime,
     mediaFiles,
     writtenBy,
-    content: { json },
+    content,
     // description,
   } = data.intv;
 
@@ -51,12 +49,16 @@ const Template = ({ data }) => {
           //   type="video/mp4"
           //   data-setup='{"controls": true, "autoplay": false, "preload": "auto", "playbackSpeeds": [.5, 1, 1.5]}'
           // ></video>
-          <Videoplayer poster={posterImage} />
+          <Videoplayer
+            poster={posterImage}
+            url={node.data.target.fields.file['en-US'].url}
+          />
         ) : (
           <img
             width="flex"
             src={node.data.target.fields.file['en-US'].url}
             style={{ marginTop: '1rem', maxWidth: '100%', height: 'auto' }}
+            alt="london bridge"
           ></img>
         );
       },
@@ -93,7 +95,7 @@ const Template = ({ data }) => {
             className={styles.desc}
           /> */}
           <div className={styles.desc}>
-            {documentToReactComponents(json, options)}
+            {documentToReactComponents(content.json, options)}
           </div>
           <Link to="/tours" className="btn-primary">
             <div className="btn-template">back to interviews</div>
