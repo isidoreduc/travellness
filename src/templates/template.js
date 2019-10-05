@@ -11,6 +11,8 @@ import video from 'video.js';
 import playback from 'videojs-playbackrate-adjuster';
 // import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 // import Markdown from 'react-markdown/with-html';
+import Videoplayer from '../components/videoplayer/Videoplayer';
+import posterImage from '../images/posterImage.png';
 
 import {
   FaFingerprint,
@@ -40,20 +42,21 @@ const Template = ({ data }) => {
       'embedded-asset-block': node => {
         return node.data.target.fields.file['en-US'].contentType ===
           'video/mp4' ? (
-          <video
-            class="video-js"
-            width="600"
-            controls
-            canControlPlaybackRate
-            src={node.data.target.fields.file['en-US'].url}
-            type="video/mp4"
-            data-setup='{"controls": true, "autoplay": false, "preload": "auto", "playbackSpeeds": [.5, 1, 1.5]}'
-          ></video>
+          // <video
+          //   class="video-js"
+          //   width="600"
+          //   controls
+          //   canControlPlaybackRate
+          //   src={node.data.target.fields.file['en-US'].url}
+          //   type="video/mp4"
+          //   data-setup='{"controls": true, "autoplay": false, "preload": "auto", "playbackSpeeds": [.5, 1, 1.5]}'
+          // ></video>
+          <Videoplayer poster={posterImage} />
         ) : (
           <img
             width="400"
             src={node.data.target.fields.file['en-US'].url}
-            alt="here there should be an image"
+            style={{ marginTop: '1rem' }}
           ></img>
         );
       },
