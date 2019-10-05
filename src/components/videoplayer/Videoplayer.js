@@ -20,7 +20,7 @@ const Videoplayer = ({ poster, url }) => {
       <ControlBar autoHide={true}>
         <ReplayControl seconds={10} order={5} />
         <ForwardControl seconds={10} order={5} />
-        <ClosedCaptionButton order={8} />
+        <ClosedCaptionButton order={7} />
         <PlaybackRateMenuButton
           order={8}
           rates={[4, 2.5, 2, 1.75, 1.5, 1.3, 1, 0.8, 0.5]}
