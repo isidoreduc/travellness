@@ -5,7 +5,7 @@
   width: 80vw;
   margin: 0 auto;
 }
-
+/* / */
 .title {
   font-size: 3rem;
 }
@@ -43,7 +43,6 @@
 }
 .desc {
   line-height: 2;
-  margin: 0 16rem;
 }
 .template h4 {
   text-transform: capitalize;
@@ -54,18 +53,16 @@
 .journey {
   margin: 3rem 0;
 }
-@media screen and (min-width: 720px) {
-  .journey,
-  .desc {
-    width: 60vw;
 
-  }
+.btn-template{
+  margin-left: 16rem;
 }
+
 
 @media screen and (min-width: 992px) {
   .journey,
   .desc {
-    width: 65vw;
+    /* width: 65vw; */
     margin: 0 10rem;
   }
   .title {

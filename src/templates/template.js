@@ -54,9 +54,9 @@ const Template = ({ data }) => {
           <Videoplayer poster={posterImage} />
         ) : (
           <img
-            width="400"
+            width="flex"
             src={node.data.target.fields.file['en-US'].url}
-            style={{ marginTop: '1rem' }}
+            style={{ marginTop: '1rem', maxWidth: '100%', height: 'auto' }}
           ></img>
         );
       },
@@ -96,7 +96,7 @@ const Template = ({ data }) => {
             {documentToReactComponents(json, options)}
           </div>
           <Link to="/tours" className="btn-primary">
-            back to interviews
+            <div className="btn-template">back to interviews</div>
           </Link>
         </div>
       </section>
