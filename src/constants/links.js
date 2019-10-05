@@ -5,7 +5,7 @@ export default [
   },
   {
     path: '/tours',
-    text: 'interviews',
+    text: 'encounters',
   },
   {
     path: '/blog',

@@ -1,16 +1,25 @@
-import React from "react"
-import { FaFacebook, FaTwitterSquare, FaSquarespace } from "react-icons/fa"
+import React from 'react';
+import {
+  FaFacebook,
+  FaTwitterSquare,
+  FaInstagram,
+  FaYoutube,
+} from 'react-icons/fa';
 export default [
   {
     icon: <FaFacebook />,
-    url: "https://www.facebook.com",
+    url: 'https://www.facebook.com',
   },
   {
     icon: <FaTwitterSquare />,
-    url: "https://www.twitter.com/?lang=en",
+    url: 'https://www.twitter.com/?lang=en',
   },
   {
-    icon: <FaSquarespace />,
-    url: "https://www.squarespace.com",
+    icon: <FaInstagram />,
+    url: 'https://www.instagram.com',
   },
-]
+  {
+    icon: <FaYoutube />,
+    url: 'https://www.youtube.com',
+  },
+];

@@ -12,7 +12,7 @@ const FeaturedInterviews = () => {
 
   return (
     <section className={styles.tours}>
-      <Title title="Featured" subtitle="interviews" />
+      <Title title="Featured" subtitle="encounters" />
       <div className={styles.center}>
         {/* destructuring the interviews object and getting the node atribute that has all the info needed */}
         {interviews.map(({ node }) => (
