@@ -34,7 +34,10 @@
     "react-html-parser": "^2.0.2",
     "react-icons": "^3.7.0",
     "react-markdown": "^4.2.2",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "video-react": "^0.14.1",
+    "video.js": "^7.6.5",
+    "videojs-playbackrate-adjuster": "^1.0.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

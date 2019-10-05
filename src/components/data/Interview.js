@@ -1,18 +1,18 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import styles from '../../css/tour.module.css';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+// import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { FaFingerprint } from 'react-icons/fa';
+import { Link } from 'gatsby';
 
 const Interview = ({ interview }) => {
-
   return (
     <article className={styles.tour}>
       <div className={styles.imgContainer}>
         <Image fluid={interview.mediaFiles[0].fluid} className={styles.img} />
-        <AniLink fade className={styles.link} to={`/tours/${interview.slug}`}>
+        <Link className={styles.link} to={`/tours/${interview.slug}`}>
           details
-        </AniLink>
+        </Link>
       </div>
 
       <div className={styles.footer}>

@@ -2,8 +2,9 @@ import React from 'react';
 import Interview from './data/Interview';
 import { graphql, useStaticQuery } from 'gatsby';
 import styles from '../css/items.module.css';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+// import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Title from '../components/title';
+import { Link } from 'gatsby';
 
 const FeaturedInterviews = () => {
   const response = useStaticQuery(getFeaturedInterviews);
@@ -18,9 +19,9 @@ const FeaturedInterviews = () => {
           <Interview key={node.contentful_id} interview={node} />
         ))}
       </div>
-      <AniLink fade to="/tours" className="btn-primary">
+      <Link to="/tours" className="btn-primary">
         all articles
-      </AniLink>
+      </Link>
     </section>
   );
 };

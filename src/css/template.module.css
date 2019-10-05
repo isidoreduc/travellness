@@ -1,6 +1,5 @@
 .template {
   padding: 4rem 0;
-  margin: 0 16rem;
 }
 .center {
   width: 80vw;
@@ -9,7 +8,6 @@
 
 .title {
   font-size: 3rem;
-  /* margin: 0 16rem 1rem; */
 }
 
 .images {
@@ -30,7 +28,7 @@
 .info {
   display: flex;
   flex-wrap: wrap;
-  /* margin-left: 6rem; */
+  margin-bottom: 1.5rem;
 }
 .info p {
   display: flex;
@@ -45,7 +43,7 @@
 }
 .desc {
   line-height: 2;
-  /* margin: 0 6rem; */
+  margin: 0 16rem;
 }
 .template h4 {
   text-transform: capitalize;
@@ -56,10 +54,25 @@
 .journey {
   margin: 3rem 0;
 }
+@media screen and (min-width: 720px) {
+  .journey,
+  .desc {
+    width: 60vw;
+
+  }
+}
+
 @media screen and (min-width: 992px) {
   .journey,
   .desc {
-    width: 70vw;
+    width: 65vw;
+    margin: 0 10rem;
+  }
+  .title {
+  margin: 0 10rem 1rem;
+  }
+  .info {
+  margin-left: 10rem;
   }
 }
 @media screen and (min-width: 1200px) {

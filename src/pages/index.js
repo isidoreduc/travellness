@@ -2,8 +2,8 @@ import React from 'react';
 import Layout from '../components/layout';
 import StyledHero from '../components/styledHero';
 import Banner from '../components/banner';
-import { graphql, useStaticQuery } from 'gatsby';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+// import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import About from '../components/about';
 import OurServices from '../components/ourServices';
 import FeaturedInterviews from '../components/FeaturedInterviews';
@@ -18,9 +18,9 @@ export default () => {
           title="anthropoetry"
           info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quibusdam?"
         >
-          <AniLink fade to="/tours" className="btn-white">
+          <Link to="/tours" className="btn-white">
             explore
-          </AniLink>
+          </Link>
         </Banner>
       </StyledHero>
 
