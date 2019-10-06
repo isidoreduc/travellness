@@ -1,0 +1,48 @@
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"); */
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* min-height: calc(100vh - 62px);
+  background: linear-gradient(rgba(255, 92, 91, 0.7), rgba(0, 0, 0, 0.7));
+  background-position: center;
+  background-size: cover;
+  opacity: 1 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.children {
+  /* text-align: center; */
+  /* font-size: 6rem; */
+  /* font-family: "Cookie"; */
+  /* padding: 20px; */
+  /* margin: 15px; */
+  z-index: 1;
+  /* opacity: 0.7; */
+  
+}
+
+.videoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.colorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff5e57;
+  height: 100vh;
+  opacity: 0.4;
+}

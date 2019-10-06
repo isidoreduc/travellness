@@ -1,19 +1,21 @@
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
-import Layout from '../components/layout';
-import StyledHero from '../components/styledHero';
-import Banner from '../components/banner';
-import { graphql, useStaticQuery, Link } from 'gatsby';
 // import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import About from '../components/about';
-import OurServices from '../components/ourServices';
+import Banner from '../components/banner';
 import FeaturedInterviews from '../components/FeaturedInterviews';
+import Layout from '../components/layout';
+import OurServices from '../components/ourServices';
+import VideoBackground from '../components/videoHero/VideoBackground';
+import video from '../videos/manCarpet.mp4';
 
 export default () => {
-  const { homeImage } = useStaticQuery(data);
+  // uncomment if you use the StyledHero again
+  // const { homeImage } = useStaticQuery(data);
 
   return (
     <Layout>
-      <StyledHero img={homeImage.childImageSharp.fluid} home>
+      {/* <StyledHero img={homeImage.childImageSharp.fluid} home>
         <Banner
           title="anthropoetry"
           info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quibusdam?"
@@ -22,7 +24,18 @@ export default () => {
             explore
           </Link>
         </Banner>
-      </StyledHero>
+      </StyledHero> */}
+
+      <VideoBackground src={video} type="video/mp4">
+        <Banner
+          title="anthropoetry"
+          info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quibusdam?"
+        >
+          <Link to="/tours" className="btn-white">
+            explore
+          </Link>
+        </Banner>
+      </VideoBackground>
 
       <FeaturedInterviews />
       <OurServices />
@@ -31,14 +44,15 @@ export default () => {
   );
 };
 
-const data = graphql`
-  {
-    homeImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-  }
-`;
+// uncomment if you use the StyledHero again
+// const data = graphql`
+//   {
+//     homeImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+//       childImageSharp {
+//         fluid {
+//           ...GatsbyImageSharpFluid_tracedSVG
+//         }
+//       }
+//     }
+//   }
+// `;
