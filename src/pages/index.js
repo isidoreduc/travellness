@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
 // import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import About from '../components/about';
@@ -6,9 +6,8 @@ import Banner from '../components/banner';
 import FeaturedInterviews from '../components/FeaturedInterviews';
 import Layout from '../components/layout';
 import OurServices from '../components/ourServices';
-import VideoBackground from '../components/videoHero/VideoBackground';
-import video from '../videos/manCarpet.mp4';
-
+import StyledHeroVideo from '../components/StyledHeroVideo';
+import videoHero from '../videos/anthropomovie.mp4';
 export default () => {
   // uncomment if you use the StyledHero again
   // const { homeImage } = useStaticQuery(data);
@@ -26,7 +25,7 @@ export default () => {
         </Banner>
       </StyledHero> */}
 
-      <VideoBackground src={video} type="video/mp4">
+      <StyledHeroVideo src={videoHero} type="video/mp4">
         <Banner
           title="anthropoetry"
           info="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, quibusdam?"
@@ -35,7 +34,7 @@ export default () => {
             explore
           </Link>
         </Banner>
-      </VideoBackground>
+      </StyledHeroVideo>
 
       <FeaturedInterviews />
       <OurServices />
