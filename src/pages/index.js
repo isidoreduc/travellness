@@ -7,7 +7,7 @@ import FeaturedInterviews from '../components/FeaturedInterviews';
 import Layout from '../components/layout';
 import OurServices from '../components/ourServices';
 import StyledHeroVideo from '../components/StyledHeroVideo';
-import videoHero from '../videos/anthropomovie.mp4';
+import videoHero from '../videos/manCarpet.mp4';
 export default () => {
   // uncomment if you use the StyledHero again
   // const { homeImage } = useStaticQuery(data);
